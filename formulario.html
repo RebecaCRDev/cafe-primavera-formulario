@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas — Café Primavera</title>
+
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html">
+        <img src="img/favicon (1).png" alt="Logotipo de Café Primavera">
+      </a>
+    </div>
+
+    <div class="navbar-links">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="formulario.html" class="active">Reservas</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Reservas en Café Primavera</h1>
+    <p>Inscripción para talleres, catas de café y experiencias florales</p>
+  </header>
+
+  <div class="wrap">
+
+    <form id="form-inscripcion" action="#" method="post" novalidate>
+
+      <fieldset>
+        <legend>1) Datos personales</legend>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="nombre">Nombre *</label>
+            <input id="nombre" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="apellidos">Apellidos *</label>
+            <input id="apellidos" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="dni">Documento (DNI) *</label>
+            <input id="dni" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+        </div>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="fecha-nac">Fecha de nacimiento *</label>
+            <input id="fecha-nac" type="date" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="sexo">Género</label>
+            <select id="sexo">
+              <option value="">— Selecciona —</option>
+              <option value="f">Femenino</option>
+              <option value="m">Masculino</option>
+              <option value="x">Prefiero no decirlo</option>
+            </select>
+          </div>
+
+          <div class="control">
+            <label for="estado-civil">Estado civil</label>
+            <select id="estado-civil">
+              <option value="">— Selecciona —</option>
+              <option>Soltero/a</option>
+              <option>Casado/a</option>
+              <option>Pareja de hecho</option>
+            </select>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2) Contacto y dirección</legend>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="email">Correo electrónico *</label>
+            <input id="email" type="email" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="telefono">Teléfono móvil *</label>
+            <input id="telefono" type="tel" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label>Preferencia de contacto</label>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="contacto_pref" value="email" checked> Email</label>
+              <label class="chip"><input type="radio" name="contacto_pref" value="tel"> Teléfono</label>
+              <label class="chip"><input type="radio" name="contacto_pref" value="whatsapp"> WhatsApp</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="direccion">Dirección *</label>
+            <input id="direccion" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="ciudad">Ciudad *</label>
+            <input id="ciudad" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="cp">Código postal *</label>
+            <input id="cp" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3) Preferencias y objetivos</legend>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="altura">Altura (cm) *</label>
+            <input id="altura" type="number" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="peso">Peso (kg) *</label>
+            <input id="peso" type="number" required />
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="nivel">Nivel de actividad actual *</label>
+            <select id="nivel" required>
+              <option value="">— Selecciona —</option>
+              <option>Sedentario</option>
+              <option>Ligero</option>
+              <option>Moderado</option>
+              <option>Intenso</option>
+            </select>
+            <p class="error-msg"></p>
+          </div>
+
+        </div>
+
+        <div class="grid cols-2">
+
+          <div class="control">
+            <label for="objetivos">Objetivos *</label>
+            <textarea id="objetivos" required></textarea>
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label>Preferencias especiales</label>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" value="aromas"> Sensibilidad a aromas</label>
+              <label class="chip"><input type="checkbox" value="alergias"> Alergias</label>
+              <label class="chip"><input type="checkbox" value="movilidad"> Movilidad reducida</label>
+              <label class="chip"><input type="checkbox" value="ninguna"> Ninguna</label>
+            </div>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>4) Actividades y horarios</legend>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="plan">Actividad a reservar *</label>
+            <select id="plan" required>
+              <option value="">— Selecciona —</option>
+              <option>Taller floral</option>
+              <option>Cata de café</option>
+              <option>Ramo personalizado</option>
+              <option>Evento privado</option>
+            </select>
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <h4>Duración / Precios orientativos</h4>
+            <p class="hint">Taller: 30€ · Cata: 20€ · Evento: según presupuesto</p>
+          </div>
+
+          <div class="control">
+            <label>Días preferidos *</label>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" value="lu"> Lu</label>
+              <label class="chip"><input type="checkbox" value="ma"> Ma</label>
+              <label class="chip"><input type="checkbox" value="mi"> Mi</label>
+              <label class="chip"><input type="checkbox" value="ju"> Ju</label>
+              <label class="chip"><input type="checkbox" value="vi"> Vi</label>
+              <label class="chip"><input type="checkbox" value="sa"> Sá</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="hora">Franja horaria *</label>
+            <select id="hora" required>
+              <option value="">— Selecciona —</option>
+              <option>9:00–12:00</option>
+              <option>12:00–16:00</option>
+              <option>16:00–19:00</option>
+            </select>
+            <p class="error-msg"></p>
+          </div>
+
+          <div class="control">
+            <label for="clases">Intereses (multi-selección)</label>
+            <select id="clases" multiple>
+              <option>Arte floral</option>
+              <option>Café y barismo</option>
+              <option>Decoración</option>
+              <option>Velas aromáticas</option>
+            </select>
+          </div>
+
+          <div class="control">
+            <label for="referido">¿Quién te recomendó?</label>
+            <input id="referido" type="text" />
+          </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>5) Facturación</legend>
+
+        <div class="grid cols-3">
+
+          <div class="control">
+            <label for="nif-fac">NIF/NIE</label>
+            <input id="nif-fac" type="text" />
+          </div>
+
+          <div class="control">
+            <label for="dir-fac">Dirección de facturación</label>
+            <input id="dir-fac" type="text" />
+          </div>
+
+          <div class="control">
+            <label for="iban">IBAN (4 últimos) *</label>
+            <input id="iban" type="text" required />
+            <p class="error-msg"></p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <h2>6) Consentimientos</h2>
+
+      <div class="consent-line">
+        <input type="checkbox" id="tos" required>
+        <label for="tos">Acepto los términos y condiciones *</label>
+      </div>
+
+      <div class="consent-line">
+        <input type="checkbox" id="rgpd" required>
+        <label for="rgpd">Acepto el tratamiento de datos según la política de privacidad *</label>
+      </div>
+
+      <div class="consent-line">
+        <input type="checkbox" id="promo">
+        <label for="promo">Deseo recibir novedades y promociones</label>
+      </div>
+
+      <div class="actions">
+        <button type="reset" class="btn-secondary">Limpiar</button>
+        <button type="submit" class="btn-primary">Enviar solicitud</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Café Primavera</p>
+  </footer>
+
+  <div id="modal-ok" class="modal">
+    <div class="modal-content">
+      <h3>Formulario enviado</h3>
+      <p>Tu solicitud se ha enviado correctamente.</p>
+      <button id="cerrar-modal" class="btn-primary">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/formValidation.js"></script>
+</body>
+</html>
